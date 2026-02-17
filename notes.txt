@@ -1,0 +1,25 @@
+# 📱 miHmo - Anotações
+
+## 🔹 Permissões Android
+- id=com.android.packageinstaller:id/permission_allow_button
+- id=com.android.permissioncontroller:id/permission_allow_foreground_only_button
+
+## 🔹 Comandos úteis
+
+Reiniciar adb:
+adb kill-server
+adb start-server
+
+Desinstalar app:
+adb uninstall br.com.mihmo.saude
+
+## 🔹 Appium
+
+{
+  "platformName": "Android",
+  "appium:automationName": "UiAutomator2",
+  "appium:deviceName": "4d73cef8",
+  "appium:uiautomator2ServerInstallTimeout": 60000
+}
+
+Remote Host: localhost ; Remote Port: 4723; Remote Path: /

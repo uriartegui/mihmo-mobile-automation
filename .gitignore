@@ -1,0 +1,13 @@
+# Robot Framework
+log.html
+report.html
+output.xml
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# OS
+.DS_Store
+Thumbs.db

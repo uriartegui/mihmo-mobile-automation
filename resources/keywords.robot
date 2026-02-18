@@ -25,7 +25,9 @@ ${ALLOW_WHILE_USING_BUTTON}   id=com.android.permissioncontroller:id/permission_
 
 *** Keywords ***
 ##################################################
+
 Open App Clean
+
     Open Application
     ...    ${REMOTE_URL}
     ...    platformName=${PLATFORM_NAME}
@@ -37,8 +39,11 @@ Open App Clean
 
     Sleep    2s
     Tratar Permissoes Android
+
 ##################################################
+
 Open App With Session
+
     Open Application
     ...    ${REMOTE_URL}
     ...    platformName=${PLATFORM_NAME}
@@ -58,25 +63,38 @@ Open App With Session
     Wait Until Element Is Visible
     ...    xpath=//*[contains(@content-desc,"Olá")]
     ...    20s
+
 ##################################################
 Close App
+
     Close Application
+
 ##################################################
+
 Close App Safely
+
     Run Keyword And Ignore Error    Terminate Application    ${APP_PACKAGE}
     Run Keyword And Ignore Error    Close Application
+
 ##################################################
+
 Click Login Button
+
     Wait Until Element Is Visible    ${ACCESS_ACCOUNT}    10s
     Click Element    ${ACCESS_ACCOUNT}
+
 ##################################################
+
 Tratar Permissoes Android
     FOR    ${i}    IN RANGE    5
         Run Keyword And Ignore Error    Click Element    ${ALLOW_PERMISSION_BUTTON}
         Run Keyword And Ignore Error    Click Element    ${ALLOW_WHILE_USING_BUTTON}
     END
+
 ##################################################
+
 Login With Credentials
+
     Wait Until Element Is Visible    ${CPF_LOGIN}    10s
     Click Element    ${CPF_LOGIN}
     Clear Text    ${CPF_LOGIN}
@@ -98,8 +116,11 @@ Login With Credentials
 
     Wait Until Element Is Visible    ${ENTER_LOGIN}    10s
     Click Element    ${ENTER_LOGIN}
+
 ##################################################
+
 Handle Daily Feeling Screen
+
     ${sentimento}=    Run Keyword And Return Status
     ...    Wait Until Element Is Visible
     ...    accessibility_id=Como você está se sentindo hoje?
@@ -126,8 +147,11 @@ Handle Daily Feeling Screen
     Wait Until Element Is Visible
     ...    xpath=//android.widget.ImageView[contains(@content-desc,"Olá")]
     ...    15s
+
 ##################################################
+
 Ask For Credentials
+
     ${cpf}=     Get Value From User    Digite o CPF:
     ${senha}=   Get Value From User    Digite a Senha:
 
@@ -136,7 +160,9 @@ Ask For Credentials
 
     Set Suite Variable    ${CPF_USER}    ${cpf}
     Set Suite Variable    ${SENHA_USER}  ${senha}
+
 ##################################################
+
 First Access Button
 
     Wait Until Element Is Visible
@@ -174,6 +200,121 @@ First Access Button
     Wait Until Element Is Visible
     ...    xpath=//*[contains(@content-desc,"CPF incorreto")]
     ...    10s
+
 ##################################################
 
+Data User Button
 
+    Wait Until Element Is Visible
+    ...    xpath=//android.widget.ImageView[contains(@content-desc,"Olá")]
+    ...    15s
+
+    Click Element
+    ...    xpath=//android.widget.ImageView[contains(@content-desc,"Olá")]
+
+    Wait Until Element Is Visible
+    ...    accessibility_id=Editar Perfil
+    ...    10s
+
+    Click Element
+    ...     accessibility_id=Editar Perfil
+
+    Wait Until Element Is Visible
+    ...     ${CONFIRM_LOGIN}
+    ...     10s
+
+    Click Element
+    ...     ${CONFIRM_LOGIN}
+
+    Sleep   10s
+
+    Wait Until Element Is Visible
+    ...    accessibility_id=Editar Perfil
+    ...    10s
+
+    Press Keycode    4
+
+    Wait Until Element Is Visible
+    ...    xpath=//android.widget.ImageView[contains(@content-desc,"Olá")]
+    ...    15s
+
+##################################################
+
+Tutorial Button
+
+    Wait Until Element Is Visible
+    ...     xpath=(//android.widget.ImageView)[2]
+    ...     10s
+
+    Click Element
+    ...     xpath=(//android.widget.ImageView)[2]
+
+    Press Keycode    4
+
+    Wait Until Element Is Visible
+    ...    xpath=//android.widget.ImageView[contains(@content-desc,"Olá")]
+    ...    15s
+
+##################################################
+
+Chat Button
+
+    Wait Until Element Is Visible
+    ...     xpath=(//android.widget.ImageView)[3]
+    ...     10s
+
+    Click Element
+    ...     xpath=(//android.widget.ImageView)[3]
+
+    Wait Until Element Is Visible
+    ...     accessibility_id=Chat com Time de Saúde
+
+    Press Keycode    4
+
+    Wait Until Element Is Visible
+    ...    xpath=//android.widget.ImageView[contains(@content-desc,"Olá")]
+    ...    15s
+
+##################################################
+
+Notify Button
+
+    Wait Until Element Is Visible
+    ...     xpath=(//android.widget.ImageView)[4]
+    ...     10s
+
+    Click Element
+    ...     xpath=(//android.widget.ImageView)[4]
+
+    Wait Until Element Is Visible
+    ...     accessibility_id=Suas Notificações
+
+    Press Keycode   4
+
+    Wait Until Element Is Visible
+    ...    xpath=//android.widget.ImageView[contains(@content-desc,"Olá")]
+    ...    15s
+
+##################################################
+
+Menu Button
+
+    Wait Until Element Is Visible
+    ...     xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View
+    ...     10s
+
+    Click Element
+    ...     xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View
+
+    Wait Until Element Is Visible
+    ...     accessibility_id=Home
+    ...     10s
+
+    Click Element
+    ...     accessibility_id=Home
+
+    Wait Until Element Is Visible
+    ...    xpath=//android.widget.ImageView[contains(@content-desc,"Olá")]
+    ...    15s
+
+##################################################

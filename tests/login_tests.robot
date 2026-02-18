@@ -3,7 +3,7 @@ Resource    ../resources/keywords.robot
 
 *** Test Cases ***
 Login With Valid Account
-    Open App
+    Open App Clean
     
     Click Login Button
     
@@ -13,6 +13,16 @@ Login With Valid Account
     
     Handle Daily Feeling Screen
     
-    Close App
+    [Teardown]    Close App Safely
 
+Login With Conected Account
+    Open App With Session
 
+    [Teardown]    Close App Safely
+
+First Access
+    Open App Clean
+
+    First Access Button
+
+    [Teardown]    Close App Safely

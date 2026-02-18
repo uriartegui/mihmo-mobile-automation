@@ -23,3 +23,7 @@ adb uninstall br.com.mihmo.saude
 }
 
 Remote Host: localhost ; Remote Port: 4723; Remote Path: /
+
+python -m robot tests
+python -m robot tests/login_tests.robot
+python -m robot -t "Login conta autenticada" tests

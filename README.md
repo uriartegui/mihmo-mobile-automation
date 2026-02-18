@@ -15,26 +15,20 @@ O objetivo é simular cenários reais de automação de testes mobile, aplicando
 
 Este projeto foi criado para fortalecer habilidades em automação mobile e compor portfólio profissional.
 ***
-🆕 Versão Atual
-✅ v1.0.0 – Automação Completa do Fluxo de Login
+## 🆕 Versão Atual
 
-Esta versão contempla:
-
-- ✔ Automação do fluxo completo de autenticação
-
+### ✅ v1.1.0 – Expansão do Fluxo de Autenticação
+- ✔ Automação do fluxo completo de login
+- ✔ Automação do fluxo “Primeiro Acesso”
+- ✔ Automação de conta já conectada (noReset=true)
 - ✔ Tratamento automático de permissões Android
-
 - ✔ Manipulação de teclado (Hide Keyboard)
-
 - ✔ Tratamento de telas condicionais:
-
   - Tela de Sentimento Diário
-
   - Modal de Tutorial
-
-- ✔ Validação pós-login (tela inicial com “Olá”)
-
+- ✔ Validação pós-login (tela inicial contendo "Olá")
 - ✔ Estrutura organizada e reutilizável de Keywords
+- ✔ Teardown seguro com fechamento protegido da aplicação
 ***
 🧪 Tecnologias Utilizadas
 | Tecnologia       | Finalidade               |

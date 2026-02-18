@@ -17,18 +17,10 @@ Este projeto foi criado para fortalecer habilidades em automação mobile e comp
 ***
 ## 🆕 Versão Atual
 
-### ✅ v1.1.0 – Expansão do Fluxo de Autenticação
-- ✔ Automação do fluxo completo de login
-- ✔ Automação do fluxo “Primeiro Acesso”
-- ✔ Automação de conta já conectada (noReset=true)
-- ✔ Tratamento automático de permissões Android
-- ✔ Manipulação de teclado (Hide Keyboard)
-- ✔ Tratamento de telas condicionais:
-  - Tela de Sentimento Diário
-  - Modal de Tutorial
-- ✔ Validação pós-login (tela inicial contendo "Olá")
-- ✔ Estrutura organizada e reutilizável de Keywords
-- ✔ Teardown seguro com fechamento protegido da aplicação
+### ✅ Versão 1.2.0
+- Refatoração de locators
+- Melhoria na estabilidade da navegação
+- Ajuste no ciclo de vida do app durante os testes
 ***
 🧪 Tecnologias Utilizadas
 | Tecnologia       | Finalidade               |
